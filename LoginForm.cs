@@ -13,11 +13,25 @@ using System.Data.SqlClient;
 using TouchUP.Visores.operario;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using System.Diagnostics.Eventing.Reader;
+using TouchUP.Visores;
+using TouchUP.Visores.admin;
+using MySql.Data.MySqlClient;
+using System.CodeDom;
+using TouchUP.Placas.AA;
+using TouchUP.Visores.supervisor;
+using System.Diagnostics;
+using System.IO;
+using System.Threading;
 
 namespace TouchUP
 {
     public partial class LoginForm : Form
     {
+
+        private List<Usuarios> mUsuarios;
+        private UsuariosConsultas mUsuariosConsultas;
+
+        // Rounded corners
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -30,58 +44,70 @@ namespace TouchUP
             int nHeightEllipse // height of ellipse
         );
 
+        // Form
 
         public LoginForm()
         {
             InitializeComponent();
+
+            mUsuarios = new List<Usuarios>();
+            mUsuariosConsultas = new UsuariosConsultas();
+
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
+
+            // Version
+
+            if (Application.ProductVersion.Length > 3)
+            {
+                TxtVersion.Text = TxtVersion.Text.Substring(0, 3);
+                this.Text = "TouchUp Solnik" + " v" + Application.ProductVersion.Substring(0, 3) + " - Inicio de sesión";
+                this.TxtVersion.Text = "v" + Application.ProductVersion.Substring(0, 3);
+            }
         }
 
-        SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Model;Integrated Security=True");
-
-        // Login
-
-        public void Login(string Usuario, string Password) {
-
+        public void Login(string Usuario, string Password)
+        {
             try
             {
-                cn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Usuario, Password, Role FROM Usuarios WHERE Usuario = @Usuario AND Password = @Password", cn);
-                cmd.Parameters.AddWithValue("Usuario", Usuario);
-                cmd.Parameters.AddWithValue("Password", Password);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                ConexionMySql conexion = new ConexionMySql();
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM Usuarios WHERE Usuario = @Usuario AND Password = @Password", conexion.getConnection());
+                cmd.Parameters.AddWithValue("usuario", Usuario);
+                cmd.Parameters.AddWithValue("password", Password);
+                MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
                 if (dt.Rows.Count == 1)
                 {
                     this.Hide();
-                    if (dt.Rows[0][2].ToString() == "1")
+                    if (dt.Rows[0][3].ToString() == "0" || dt.Rows[0][3].ToString() == "1") // Si el usuario es superadmin o admin se abre la pantalla de administrador
                     {
-                        new DisplayAdmin(dt.Rows[0][0].ToString()).Show();
+                        Cursor.Current = Cursors.WaitCursor;
+                        AdminInicio adminForm = new AdminInicio(Usuario);
+                        adminForm.Show();
                     }
-                    else if (dt.Rows[0][2].ToString() == "2")
+                    if (dt.Rows[0][3].ToString() == "2") // Si el usuario es supervisor se abre la pantalla de supervisor
                     {
-                        new DisplaySupervisor(dt.Rows[0][0].ToString()).Show();
+                        Cursor.Current = Cursors.WaitCursor;
+                        DisplaySupervisor displaySupervisor = new DisplaySupervisor(Usuario);
+                        displaySupervisor.Show();
                     }
-                    else if (dt.Rows[0][2].ToString() == "3")
+                    if (dt.Rows[0][3].ToString() == "3") // Si el usuario es operario se abre la pantalla de operario
                     {
-                        new DisplayOperarioInicio(dt.Rows[0][0].ToString()).Show();
+                        Cursor.Current = Cursors.WaitCursor;
+                        OperarioInicio operarioinicio = new OperarioInicio(Usuario);
+                        operarioinicio.Show();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("El nombre de usuario o contraseña es incorrecto", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El nombre de usuario o contraseña son incorrectos. Por favor, intente nuevamente.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                MessageBox.Show(e.Message);
-            }
-            finally
-            {
-                cn.Close();
+                Application.Restart();
             }
         }
 
@@ -120,39 +146,12 @@ namespace TouchUP
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogoSolnikDark_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBoxBackground_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Está seguro que desea salir del programa?", "TouchUP", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -168,6 +167,7 @@ namespace TouchUP
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             Login(this.TxtUsuario.Text, this.TxtPassword.Text);
         }
 
@@ -197,23 +197,34 @@ namespace TouchUP
 
         private void BtnVisualizar_Click(object sender, EventArgs e)
         {
-            if (radioButtonFHD.Checked == true)
+            // No abrir si no hay conexión a internet
+
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable() == true)
             {
-                DisplayOperarioTV displayOperarioTV = new DisplayOperarioTV();
-                displayOperarioTV.Show();
-                this.Hide();
+                if (radioButtonFHD.Checked == true)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    VisorTouchFHD visorTouchFHD = new VisorTouchFHD();
+                    visorTouchFHD.Show();
+                    this.Hide();
+                }
+                if (radioButtonWXGA.Checked == true)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    VisorTouchWXGA visorTouchWXGA = new VisorTouchWXGA();
+                    visorTouchWXGA.Show();
+                    this.Hide();
+                }
             }
-            if (radioButtonWXGA.Checked == true)
+            else
             {
-                DisplayOperarioAA displayOperarioAA = new DisplayOperarioAA();
-                displayOperarioAA.Show();
-                this.Hide();
+                MessageBox.Show("Se perdió la conexión con el servidor. Por favor, verifique su conexión e intente nuevamente.", "TouchUP - Solnik", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void PicPassShow_Click(object sender, EventArgs e)
         {
-            if(TxtPassword.PasswordChar == '*')
+            if (TxtPassword.PasswordChar == '*')
             {
                 PicEyeHide.BringToFront();
                 TxtPassword.PasswordChar = '\0';
@@ -237,9 +248,30 @@ namespace TouchUP
             }
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
+        private void linkLabelPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            proc.StartInfo.FileName = "mailto:sistemasba@solnik.com.ar?subject=TouchUP%20-%20Solicitud%20de%20cambio%20de%acceso";
+            proc.Start();
 
+        }
+
+        private void TxtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtPassword.Text != null)
+            {
+                PicEyeOpen.Visible = true;
+            }
+            else
+            {
+                PicEyeOpen.Visible = false;
+            }
+        }
+
+        private void BtnInfoApp_Click(object sender, EventArgs e)
+        {
+            Updater updater = new Updater();
+            updater.ShowDialog();
         }
     }
 }

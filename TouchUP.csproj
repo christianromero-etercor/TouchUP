@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>3.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -54,6 +54,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -72,6 +75,9 @@
     <Reference Include="MySql.Data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.1.0\lib\net48\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.5.0.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>packages\SpreadsheetLight.3.5.0\lib\netstandard2.0\SpreadsheetLight.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -83,6 +89,17 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.5.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
@@ -111,35 +128,86 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
     <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsImagen.cs" />
+    <Compile Include="Conexion.cs" />
     <Compile Include="ConexionMySql.cs" />
-    <Compile Include="Placas_touch\RedirectForm.cs">
+    <Compile Include="Loader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Placas_touch\RedirectForm.Designer.cs">
-      <DependentUpon>RedirectForm.cs</DependentUpon>
+    <Compile Include="Loader.Designer.cs">
+      <DependentUpon>Loader.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visores\admin\DisplayAdmin.cs">
+    <Compile Include="Articulo.cs" />
+    <Compile Include="ArticuloConsultas.cs" />
+    <Compile Include="Updater.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visores\admin\DisplayAdmin.Designer.cs">
-      <DependentUpon>DisplayAdmin.cs</DependentUpon>
+    <Compile Include="Updater.Designer.cs">
+      <DependentUpon>Updater.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visores\operario\DisplayOperarioInicio.cs">
+    <Compile Include="Placas\AA\PCB_DISPLAY_INVERTER_3200.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visores\operario\DisplayOperarioInicio.Designer.cs">
-      <DependentUpon>DisplayOperarioInicio.cs</DependentUpon>
+    <Compile Include="Placas\AA\PCB_DISPLAY_INVERTER_3200.Designer.cs">
+      <DependentUpon>PCB_DISPLAY_INVERTER_3200.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visores\operario\DisplayOperarioAA.cs">
+    <Compile Include="Placas\AA\PCB_MAIN_INVERTER_3200.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visores\operario\DisplayOperarioAA.Designer.cs">
-      <DependentUpon>DisplayOperarioAA.cs</DependentUpon>
+    <Compile Include="Placas\AA\PCB_MAIN_INVERTER_3200.Designer.cs">
+      <DependentUpon>PCB_MAIN_INVERTER_3200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Placas\AA\PCB_INVERTER_3200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Placas\AA\PCB_INVERTER_3200.Designer.cs">
+      <DependentUpon>PCB_INVERTER_3200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroFallas.cs" />
+    <Compile Include="RegistroFallasConsultas.cs" />
+    <Compile Include="Usuarios.cs" />
+    <Compile Include="UsuariosConsultas.cs" />
+    <Compile Include="Visores\admin\AbmArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\admin\AbmArticulos.Designer.cs">
+      <DependentUpon>AbmArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visores\admin\AbmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\admin\AbmUsuarios.Designer.cs">
+      <DependentUpon>AbmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visores\admin\AgregarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\admin\AgregarArticulo.Designer.cs">
+      <DependentUpon>AgregarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visores\admin\AdminInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\admin\AdminInicio.Designer.cs">
+      <DependentUpon>AdminInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visores\admin\ModificarArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\admin\ModificarArticulos.Designer.cs">
+      <DependentUpon>ModificarArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visores\fallas\VisorTouchWXGA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\fallas\VisorTouchWXGA.Designer.cs">
+      <DependentUpon>VisorTouchWXGA.cs</DependentUpon>
     </Compile>
     <Compile Include="Visores\operario\DisplayOperarioTV.cs">
       <SubType>Form</SubType>
@@ -147,11 +215,17 @@
     <Compile Include="Visores\operario\DisplayOperarioTV.Designer.cs">
       <DependentUpon>DisplayOperarioTV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visores\supervisor\DisplaySupervisor.cs">
+    <Compile Include="Visores\operario\OperarioInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visores\supervisor\DisplaySupervisor.Designer.cs">
-      <DependentUpon>DisplaySupervisor.cs</DependentUpon>
+    <Compile Include="Visores\operario\OperarioInicio.Designer.cs">
+      <DependentUpon>OperarioInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visores\operario\DisplayOperarioAA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\operario\DisplayOperarioAA.Designer.cs">
+      <DependentUpon>DisplayOperarioAA.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -161,29 +235,99 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Visores\admin\DisplayAdmin.es-AR.resx">
-      <DependentUpon>DisplayAdmin.cs</DependentUpon>
+    <Compile Include="Visores\fallas\VisorTouchFHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\fallas\VisorTouchFHD.Designer.cs">
+      <DependentUpon>VisorTouchFHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visores\supervisor\HistoricoRegistroFallas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\supervisor\HistoricoRegistroFallas.Designer.cs">
+      <DependentUpon>HistoricoRegistroFallas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visores\supervisor\EliminarRegistroFallas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\supervisor\EliminarRegistroFallas.Designer.cs">
+      <DependentUpon>EliminarRegistroFallas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visores\supervisor\LoginSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\supervisor\LoginSupervisor.Designer.cs">
+      <DependentUpon>LoginSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visores\supervisor\DisplaySupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visores\supervisor\DisplaySupervisor.Designer.cs">
+      <DependentUpon>DisplaySupervisor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Loader.resx">
+      <DependentUpon>Loader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visores\admin\DisplayAdmin.resx">
-      <DependentUpon>DisplayAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Updater.resx">
+      <DependentUpon>Updater.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visores\operario\DisplayOperarioInicio.resx">
-      <DependentUpon>DisplayOperarioInicio.cs</DependentUpon>
+    <EmbeddedResource Include="Placas\AA\PCB_DISPLAY_INVERTER_3200.aa.resx">
+      <DependentUpon>PCB_DISPLAY_INVERTER_3200.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visores\operario\DisplayOperarioAA.resx">
-      <DependentUpon>DisplayOperarioAA.cs</DependentUpon>
+    <EmbeddedResource Include="Placas\AA\PCB_DISPLAY_INVERTER_3200.resx">
+      <DependentUpon>PCB_DISPLAY_INVERTER_3200.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Placas\AA\PCB_MAIN_INVERTER_3200.aa.resx">
+      <DependentUpon>PCB_MAIN_INVERTER_3200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Placas\AA\PCB_MAIN_INVERTER_3200.resx">
+      <DependentUpon>PCB_MAIN_INVERTER_3200.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Placas\AA\PCB_INVERTER_3200.aa.resx">
+      <DependentUpon>PCB_INVERTER_3200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Placas\AA\PCB_INVERTER_3200.resx">
+      <DependentUpon>PCB_INVERTER_3200.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\admin\AbmArticulos.resx">
+      <DependentUpon>AbmArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\admin\AbmUsuarios.es-AR.resx">
+      <DependentUpon>AbmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\admin\AbmUsuarios.resx">
+      <DependentUpon>AbmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\admin\AgregarArticulo.resx">
+      <DependentUpon>AgregarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\admin\AdminInicio.resx">
+      <DependentUpon>AdminInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\admin\ModificarArticulos.resx">
+      <DependentUpon>ModificarArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\fallas\VisorTouchWXGA.resx">
+      <DependentUpon>VisorTouchWXGA.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Visores\operario\DisplayOperarioTV.resx">
       <DependentUpon>DisplayOperarioTV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visores\supervisor\DisplaySupervisor.resx">
-      <DependentUpon>DisplaySupervisor.cs</DependentUpon>
+    <EmbeddedResource Include="Visores\operario\OperarioInicio.resx">
+      <DependentUpon>OperarioInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\operario\DisplayOperarioAA.resx">
+      <DependentUpon>DisplayOperarioAA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -192,6 +336,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Visores\fallas\VisorTouchFHD.resx">
+      <DependentUpon>VisorTouchFHD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\supervisor\HistoricoRegistroFallas.resx">
+      <DependentUpon>HistoricoRegistroFallas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\supervisor\EliminarRegistroFallas.resx">
+      <DependentUpon>EliminarRegistroFallas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\supervisor\LoginSupervisor.resx">
+      <DependentUpon>LoginSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visores\supervisor\DisplaySupervisor.resx">
+      <DependentUpon>DisplaySupervisor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -246,7 +409,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="faviconSolnik.ico" />
     <None Include="Resources\AAIcon.png" />
     <None Include="Resources\TVIcon.png" />
     <None Include="Resources\TVIconW.png" />
@@ -257,9 +419,74 @@
     <None Include="Resources\TVIconW2.png" />
     <None Include="Resources\PicEyeOpen.png" />
     <None Include="Resources\PicEyeClosed.png" />
+    <None Include="Resources\AAIconVHide.png" />
+    <None Include="Resources\AAIconVShow.png" />
+    <None Include="Resources\TVIconVHide.png" />
+    <None Include="Resources\TVIconVShow.png" />
+    <None Include="Resources\TouchUPLogo.png" />
+    <None Include="Resources\alarm.gif" />
+    <None Include="Resources\IconLogout.png" />
+    <None Include="Resources\iconInicio.png" />
+    <None Include="Resources\iconSalir.png" />
+    <None Include="Resources\AlarmSoundLoop.wav" />
+    <None Include="Resources\AlarmSound.wav" />
+    <None Include="Resources\PicSelectImageRef.png" />
+    <None Include="Resources\PicSelectImageResolution.png" />
+    <None Include="Resources\PicSelectImageReference.png" />
+    <None Include="Resources\PicSelectImageReferenceUpload.png" />
+    <None Include="Resources\IconAgregar.png" />
+    <None Include="Resources\IconBuscar.png" />
+    <None Include="Resources\IconAlarmON.png" />
+    <None Include="Resources\IconEliminar.png" />
+    <None Include="Resources\IconModificar.png" />
+    <None Include="Resources\IconSeguridad.png" />
+    <None Include="Resources\IconVer.png" />
+    <None Include="Resources\BotonesMaker.png" />
+    <None Include="Resources\IconAlarmOFF.png" />
+    <None Include="Resources\IconAgregar1.png" />
+    <None Include="Resources\IconExitFlat.png" />
+    <None Include="Resources\IconImagen.png" />
+    <None Include="Resources\VistaPrevia.jpg" />
+    <None Include="Resources\iconUsuarios.png" />
+    <None Include="Resources\IconAbmArticulos.png" />
+    <None Include="Resources\IconOperario.png" />
+    <None Include="Resources\IconSupervisor.png" />
+    <None Include="Resources\BackVistaPrevia.png" />
+    <None Include="Resources\BtnPlusWhite.png" />
+    <None Include="Resources\BtnPlusWhite1.png" />
+    <None Include="Resources\BtnEditarGrey.png" />
+    <None Include="Resources\BtnEditarWhite.png" />
+    <None Include="Resources\BtnEliminarGrey.png" />
+    <None Include="Resources\BtnEliminarWhite.png" />
+    <None Include="Resources\BtnEyeGrey.png" />
+    <None Include="Resources\BtnEyeWhite.png" />
+    <None Include="Resources\BtnImageGrey.png" />
+    <None Include="Resources\BtnImageWhite.png" />
+    <None Include="Resources\BtnReadGrey.png" />
+    <None Include="Resources\BtnReadWhite.png" />
+    <None Include="Resources\BtnPlusGrey.png" />
+    <None Include="Resources\IconExcelExport.png" />
+    <None Include="Resources\IconExcelSaveAs.png" />
+    <None Include="Resources\pngVacio.png" />
+    <None Include="Resources\iconSupervisorDisable.png" />
+    <None Include="Resources\AAIconVShowRed.png" />
+    <None Include="Resources\TVIconVShowRed.png" />
+    <None Include="Resources\iconSupervisorEnable.png" />
+    <None Include="Resources\AlarmLoop.wav" />
+    <None Include="Resources\ContainerComponente.png" />
+    <None Include="Resources\TouchUPLogoWXGA.png" />
+    <None Include="Resources\alarm50.gif" />
+    <None Include="Resources\IconInicioOutline.png" />
+    <None Include="Resources\IconMinimizarOutline.png" />
+    <None Include="Resources\IconExitOutline.png" />
+    <None Include="Resources\IconQuestion.png" />
     <Content Include="Solnik.ico" />
-    <Content Include="Usuarios.sql" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Placas\TV\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,7 +22,7 @@ namespace TouchUP.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace TouchUP.Properties {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TouchUP.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace TouchUP.Properties {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AAIcon {
+        public static System.Drawing.Bitmap AAIcon {
             get {
                 object obj = ResourceManager.GetObject("AAIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AAIcon2 {
+        public static System.Drawing.Bitmap AAIcon2 {
             get {
                 object obj = ResourceManager.GetObject("AAIcon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,37 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AAIconW {
+        public static System.Drawing.Bitmap AAIconVHide {
+            get {
+                object obj = ResourceManager.GetObject("AAIconVHide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AAIconVShow {
+            get {
+                object obj = ResourceManager.GetObject("AAIconVShow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AAIconVShowRed {
+            get {
+                object obj = ResourceManager.GetObject("AAIconVShowRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AAIconW {
             get {
                 object obj = ResourceManager.GetObject("AAIconW", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +123,7 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AAIconW2 {
+        public static System.Drawing.Bitmap AAIconW2 {
             get {
                 object obj = ResourceManager.GetObject("AAIconW2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +133,45 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BackgroundApp {
+        public static System.Drawing.Bitmap alarm {
+            get {
+                object obj = ResourceManager.GetObject("alarm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap alarm50 {
+            get {
+                object obj = ResourceManager.GetObject("alarm50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream AlarmLoop {
+            get {
+                return ResourceManager.GetStream("AlarmLoop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream AlarmSound {
+            get {
+                return ResourceManager.GetStream("AlarmSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BackgroundApp {
             get {
                 object obj = ResourceManager.GetObject("BackgroundApp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +181,7 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BackTouchLogin {
+        public static System.Drawing.Bitmap BackTouchLogin {
             get {
                 object obj = ResourceManager.GetObject("BackTouchLogin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +191,167 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap favicon {
+        public static System.Drawing.Bitmap BackVistaPrevia {
+            get {
+                object obj = ResourceManager.GetObject("BackVistaPrevia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BotonesMaker {
+            get {
+                object obj = ResourceManager.GetObject("BotonesMaker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnEditarGrey {
+            get {
+                object obj = ResourceManager.GetObject("BtnEditarGrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnEditarWhite {
+            get {
+                object obj = ResourceManager.GetObject("BtnEditarWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnEliminarGrey {
+            get {
+                object obj = ResourceManager.GetObject("BtnEliminarGrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnEliminarWhite {
+            get {
+                object obj = ResourceManager.GetObject("BtnEliminarWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnEyeGrey {
+            get {
+                object obj = ResourceManager.GetObject("BtnEyeGrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnEyeWhite {
+            get {
+                object obj = ResourceManager.GetObject("BtnEyeWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnImageGrey {
+            get {
+                object obj = ResourceManager.GetObject("BtnImageGrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnImageWhite {
+            get {
+                object obj = ResourceManager.GetObject("BtnImageWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnPlusGrey {
+            get {
+                object obj = ResourceManager.GetObject("BtnPlusGrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnPlusWhite {
+            get {
+                object obj = ResourceManager.GetObject("BtnPlusWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnPlusWhite1 {
+            get {
+                object obj = ResourceManager.GetObject("BtnPlusWhite1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnReadGrey {
+            get {
+                object obj = ResourceManager.GetObject("BtnReadGrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BtnReadWhite {
+            get {
+                object obj = ResourceManager.GetObject("BtnReadWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ContainerComponente {
+            get {
+                object obj = ResourceManager.GetObject("ContainerComponente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap favicon {
             get {
                 object obj = ResourceManager.GetObject("favicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +361,257 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LogoAppDark {
+        public static System.Drawing.Bitmap IconAbmArticulos {
+            get {
+                object obj = ResourceManager.GetObject("IconAbmArticulos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconAgregar {
+            get {
+                object obj = ResourceManager.GetObject("IconAgregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconAlarmOFF {
+            get {
+                object obj = ResourceManager.GetObject("IconAlarmOFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconAlarmON {
+            get {
+                object obj = ResourceManager.GetObject("IconAlarmON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconBuscar {
+            get {
+                object obj = ResourceManager.GetObject("IconBuscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconEliminar {
+            get {
+                object obj = ResourceManager.GetObject("IconEliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconExcelExport {
+            get {
+                object obj = ResourceManager.GetObject("IconExcelExport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconExcelSaveAs {
+            get {
+                object obj = ResourceManager.GetObject("IconExcelSaveAs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconExitFlat {
+            get {
+                object obj = ResourceManager.GetObject("IconExitFlat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconExitOutline {
+            get {
+                object obj = ResourceManager.GetObject("IconExitOutline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconImagen {
+            get {
+                object obj = ResourceManager.GetObject("IconImagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap iconInicio {
+            get {
+                object obj = ResourceManager.GetObject("iconInicio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconInicioOutline {
+            get {
+                object obj = ResourceManager.GetObject("IconInicioOutline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconLogout {
+            get {
+                object obj = ResourceManager.GetObject("IconLogout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconMinimizarOutline {
+            get {
+                object obj = ResourceManager.GetObject("IconMinimizarOutline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconModificar {
+            get {
+                object obj = ResourceManager.GetObject("IconModificar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconOperario {
+            get {
+                object obj = ResourceManager.GetObject("IconOperario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconQuestion {
+            get {
+                object obj = ResourceManager.GetObject("IconQuestion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap iconSalir {
+            get {
+                object obj = ResourceManager.GetObject("iconSalir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconSeguridad {
+            get {
+                object obj = ResourceManager.GetObject("IconSeguridad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconSupervisor {
+            get {
+                object obj = ResourceManager.GetObject("IconSupervisor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap iconSupervisorDisable {
+            get {
+                object obj = ResourceManager.GetObject("iconSupervisorDisable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap iconSupervisorEnable {
+            get {
+                object obj = ResourceManager.GetObject("iconSupervisorEnable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap iconUsuarios {
+            get {
+                object obj = ResourceManager.GetObject("iconUsuarios", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IconVer {
+            get {
+                object obj = ResourceManager.GetObject("IconVer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap LogoAppDark {
             get {
                 object obj = ResourceManager.GetObject("LogoAppDark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +621,7 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LogoAppLight {
+        public static System.Drawing.Bitmap LogoAppLight {
             get {
                 object obj = ResourceManager.GetObject("LogoAppLight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +631,7 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LogoSolnikDark {
+        public static System.Drawing.Bitmap LogoSolnikDark {
             get {
                 object obj = ResourceManager.GetObject("LogoSolnikDark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +641,7 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LogoSolnikLight {
+        public static System.Drawing.Bitmap LogoSolnikLight {
             get {
                 object obj = ResourceManager.GetObject("LogoSolnikLight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +651,7 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PicEyeClosed {
+        public static System.Drawing.Bitmap PicEyeClosed {
             get {
                 object obj = ResourceManager.GetObject("PicEyeClosed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +661,7 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PicEyeOpen {
+        public static System.Drawing.Bitmap PicEyeOpen {
             get {
                 object obj = ResourceManager.GetObject("PicEyeOpen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +671,77 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TVIcon {
+        public static System.Drawing.Bitmap PicSelectImageRef {
+            get {
+                object obj = ResourceManager.GetObject("PicSelectImageRef", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap PicSelectImageReference {
+            get {
+                object obj = ResourceManager.GetObject("PicSelectImageReference", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap PicSelectImageReferenceUpload {
+            get {
+                object obj = ResourceManager.GetObject("PicSelectImageReferenceUpload", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap PicSelectImageResolution {
+            get {
+                object obj = ResourceManager.GetObject("PicSelectImageResolution", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap pngVacio {
+            get {
+                object obj = ResourceManager.GetObject("pngVacio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TouchUPLogo {
+            get {
+                object obj = ResourceManager.GetObject("TouchUPLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TouchUPLogoWXGA {
+            get {
+                object obj = ResourceManager.GetObject("TouchUPLogoWXGA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TVIcon {
             get {
                 object obj = ResourceManager.GetObject("TVIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +751,7 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TVIcon2 {
+        public static System.Drawing.Bitmap TVIcon2 {
             get {
                 object obj = ResourceManager.GetObject("TVIcon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +761,37 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TVIconW {
+        public static System.Drawing.Bitmap TVIconVHide {
+            get {
+                object obj = ResourceManager.GetObject("TVIconVHide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TVIconVShow {
+            get {
+                object obj = ResourceManager.GetObject("TVIconVShow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TVIconVShowRed {
+            get {
+                object obj = ResourceManager.GetObject("TVIconVShowRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TVIconW {
             get {
                 object obj = ResourceManager.GetObject("TVIconW", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -223,9 +801,19 @@ namespace TouchUP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TVIconW2 {
+        public static System.Drawing.Bitmap TVIconW2 {
             get {
                 object obj = ResourceManager.GetObject("TVIconW2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap VistaPrevia {
+            get {
+                object obj = ResourceManager.GetObject("VistaPrevia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
