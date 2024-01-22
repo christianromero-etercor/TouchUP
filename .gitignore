@@ -363,7 +363,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Conexion - Cadena de conexión
-Conexion.cs
+.Conexion.cs
 
 # ConexionMySql - Cadena de conexión MySql
-ConexionMySql.cs
+.ConexionMySql.cs
