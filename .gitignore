@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Conexion - Cadena de conexión
+Conexion.cs
+
+# ConexionMySql - Cadena de conexión MySql
+ConexionMySql.cs
