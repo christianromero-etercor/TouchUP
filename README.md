@@ -1,8 +1,8 @@
 # TouchUP - Gestión de Procesos Productivos
-<img src="https://github.com/christianromero-etercor/TouchUP/blob/master/Resources/MicrosoftTeams-image%20(41).png?raw=true" alt="TouchUP Logo" width="300">
+<img src="https://github.com/christianromero-etercor/TouchUP/blob/master/Resources/MicrosoftTeams-image%20(41).png?raw=true" alt="TouchUP Logo" width="250px">
 
 ## Descripción
-TouchUP es una herramienta de software diseñada para optimizar y mejorar los procesos productivos en entornos industriales. En su última versión 2.0, esta aplicación ofrece funcionalidades avanzadas que permiten automatizar tareas, gestionar datos de forma eficiente y aumentar la productividad en el proceso de fabricación.
+TouchUP es una herramienta de software diseñada para detectar fallas en procesos productivos dentro de entornos industriales. En su última versión 2.0, esta aplicación ofrece funcionalidades avanzadas que permiten automatizar tareas, gestionar datos de forma eficiente y aumentar la productividad en el proceso de fabricación.
 
 <img src="https://github.com/christianromero-etercor/TouchUP/blob/master/Resources/MicrosoftTeams-image%20(46).png?raw=true" alt="TouchUP Logo" width="500">
 
@@ -47,9 +47,8 @@ En caso de identificar algún problema o desviación durante el monitoreo en pan
 - Generar informes detallados sobre las incidencias encontradas y las acciones tomadas para un análisis posterior.
 <img src="https://github.com/christianromero-etercor/TouchUP/blob/master/Resources/MicrosoftTeams-image%20(58).png?raw=true" alt="TouchUP Logo" width="1000">
 
-En resumen TouchUp es una poderosa herramienta de software diseñada para optimizar y mejorar los procesos productivos en entornos industriales. En su versión 2.0, esta aplicación ofrece funcionalidades avanzadas que permiten automatizar tareas, gestionar datos eficientemente y aumentar la productividad en la fabricación de productos.
+En resumen, TouchUP es una poderosa herramienta de software diseñada para optimizar y mejorar los procesos productivos en entornos industriales. En su versión 2.0, esta aplicación ofrece funcionalidades avanzadas que permiten automatizar tareas, gestionar datos eficientemente y aumentar la productividad en la fabricación de productos. TouchUP detecta componentes con potenciales fallas en una línea de producción, permitiendo una detección temprana que reduce el riesgo de fallas en equipos mediante sus acciones correctivas.
 
-## Autor
-![TouchUP Logo](https://github.com/christianromero-etercor/TouchUP/blob/master/Resources/MicrosoftTeams-image%20(42).png?raw=true)
+<img src="https://github.com/christianromero-etercor/TouchUP/blob/master/Resources/MicrosoftTeams-image%20(42).png?raw=true" alt="TouchUP Logo" width="150px">
 
 Proyecto y Tecnología &copy; 2024. Todos los derechos reservados.
